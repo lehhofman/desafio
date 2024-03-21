@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+.cartao {
+    width: 500px;
+    height: 700px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.questao {
+    font-weight: bold;
+    display: flex;
+}
+
+.respostas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.resposta {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: relative; 
+    cursor: pointer;
+}
+
+.resposta::after { 
+    content: 'X';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+.resposta.selecionada::after { 
+    color: red;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultado {
+    font-weight: bold;
+}
